@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    
+</head>
+<body>
+    <header>
+        <h1>Syed Matheen</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-container containers">
+        <img src="myimage.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="text-content">
+            <h2>About Me</h2>
+            <p>Hello! I'm Matheen, a passionate and motivated BCA student currently in my 4th semester at Dayanand Sagar Business Academy. I have a keen interest in web development and am constantly exploring new technologies and frameworks to enhance my skills.</p>
+            <p>I am proficient in HTML, CSS, and JavaScript, and I'm always eager to learn and grow in the ever-evolving field of technology. My goal is to create impactful web solutions that solve real-world problems while ensuring they are intuitive and visually appealing.</p>
+        </div>
+    </div>
+
+    <div class="containers">
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>
+                <span>HTML</span>
+                <div class="progress-bar">
+                    <div class="progress html"></div>
+                </div>
+            </li>
+            <li>
+                <span>CSS</span>
+                <div class="progress-bar">
+                    <div class="progress css"></div>
+                </div>
+            </li>
+            <li>
+                <span>JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress js"></div>
+                </div>
+            </li>
+            <li>
+                <span>Python</span>
+                <div class="progress-bar">
+                    <div class="progress python"></div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    </div>
+<div class="containers">
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Description of the project.</p>
+            <a href="#">View Project</a>
+        </div>
+    </section>
+</div>
+<div class="containers">
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</div>
+    <footer>
+        &copy; 2025 Your Name
+    </footer>
+</body>
+</html>
