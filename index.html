@@ -1,96 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Matheen | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // Blue
+                        secondary: '#8b5cf6', // Purple
+                        accent: '#f43f5e', // Rose
+                        dark: '#1e293b', // Slate-800
+                        light: '#f8fafc', // Slate-50
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <h1>Syed Matheen</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+<body class="bg-light text-dark font-sans">
+    <!-- Header with Responsive Navigation -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Name -->
+                <a href="#" class="text-2xl font-bold text-primary flex items-center space-x-2">
+                    <i class="fas fa-user-circle text-3xl"></i>
+                    <span>Syed Matheen</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#about"
+                                class="text-dark hover:text-primary transition duration-300 flex items-center"><i
+                                    class="fas fa-info-circle mr-2"></i> About</a></li>
+                        <li><a href="#skills"
+                                class="text-dark hover:text-primary transition duration-300 flex items-center"><i
+                                    class="fas fa-code mr-2"></i> Skills</a></li>
+                        <li><a href="#projects"
+                                class="text-dark hover:text-primary transition duration-300 flex items-center"><i
+                                    class="fas fa-project-diagram mr-2"></i> Projects</a></li>
+                        <li><a href="#contact"
+                                class="text-dark hover:text-primary transition duration-300 flex items-center"><i
+                                    class="fas fa-envelope mr-2"></i> Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation (Hidden by default) -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white py-4 mt-2">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#about"
+                            class="block px-4 py-2 text-dark hover:bg-primary hover:text-white rounded transition duration-300 flex items-center"><i
+                                class="fas fa-info-circle mr-2"></i> About</a></li>
+                    <li><a href="#skills"
+                            class="block px-4 py-2 text-dark hover:bg-primary hover:text-white rounded transition duration-300 flex items-center"><i
+                                class="fas fa-code mr-2"></i> Skills</a></li>
+                    <li><a href="#projects"
+                            class="block px-4 py-2 text-dark hover:bg-primary hover:text-white rounded transition duration-300 flex items-center"><i
+                                class="fas fa-project-diagram mr-2"></i> Projects</a></li>
+                    <li><a href="#contact"
+                            class="block px-4 py-2 text-dark hover:bg-primary hover:text-white rounded transition duration-300 flex items-center"><i
+                                class="fas fa-envelope mr-2"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
-    <div class="about-container containers">
-        <img src="myimage.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="text-content">
-            <h2>About Me</h2>
-            <p>Hello! I'm Matheen, a passionate and motivated BCA student currently in my 4th semester at Dayanand Sagar Business Academy. I have a keen interest in web development and am constantly exploring new technologies and frameworks to enhance my skills.</p>
-            <p>I am proficient in HTML, CSS, and JavaScript, and I'm always eager to learn and grow in the ever-evolving field of technology. My goal is to create impactful web solutions that solve real-world problems while ensuring they are intuitive and visually appealing.</p>
-        </div>
-    </div>
-
-    <div class="containers">
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>
-                <span>HTML</span>
-                <div class="progress-bar">
-                    <div class="progress html"></div>
+    <!-- Main Content with Padding for Fixed Header -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
+                    <img src="myimage.jpg" alt="Profile Picture"
+                        class="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg">
                 </div>
-            </li>
-            <li>
-                <span>CSS</span>
-                <div class="progress-bar">
-                    <div class="progress css"></div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hello, I'm Syed Matheen</h1>
+                    <p class="text-xl mb-6">BCA Student & Aspiring Developer</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#contact"
+                            class="bg-white text-primary px-6 py-3 rounded-full font-bold hover:bg-opacity-90 transition duration-300 shadow-md flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </a>
+                        <a href="#projects"
+                            class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition duration-300 flex items-center">
+                            <i class="fas fa-project-diagram mr-2"></i> View Work
+                        </a>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <span>JavaScript</span>
-                <div class="progress-bar">
-                    <div class="progress js"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-2">About Me</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
                 </div>
-            </li>
-            <li>
-                <span>Python</span>
-                <div class="progress-bar">
-                    <div class="progress python"></div>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Hello! I'm Matheen, a passionate and motivated BCA student currently in my 4th semester at
+                        Dayanand Sagar Business Academy. I'm deeply fascinated by technology and its potential to solve
+                        real-world problems.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        My journey in computer science has equipped me with strong problem-solving abilities and a keen
+                        eye for detail. I enjoy working on challenging projects that push me to learn new skills and
+                        technologies.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        When I'm not coding, you can find me exploring new tech trends, contributing to open-source
+                        projects, or expanding my knowledge through online courses and technical books.
+                    </p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                        <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                            <i class="fas fa-graduation-cap text-3xl text-primary mb-3"></i>
+                            <h3 class="font-bold">Education</h3>
+                            <p>BCA, 4th Semester</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                            <i class="fas fa-laptop-code text-3xl text-primary mb-3"></i>
+                            <h3 class="font-bold">Development</h3>
+                            <p>Web & Software</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                            <i class="fas fa-lightbulb text-3xl text-primary mb-3"></i>
+                            <h3 class="font-bold">Innovation</h3>
+                            <p>Creative Solutions</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                            <i class="fas fa-users text-3xl text-primary mb-3"></i>
+                            <h3 class="font-bold">Teamwork</h3>
+                            <p>Collaborative Spirit</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </section>
-    </div>
-<div class="containers">
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p>Description of the project.</p>
-            <a href="#">View Project</a>
-        </div>
-    </section>
-</div>
-<div class="containers">
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+            </div>
+        </section>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-2">Skills</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-medium flex items-center"><i
+                                    class="fab fa-html5 text-orange-500 mr-2"></i> HTML</span>
+                            <span class="text-sm bg-primary text-white px-2 py-1 rounded">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-orange-500 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
 
-            <button type="submit">Send</button>
-        </form>
-    </section>
-</div>
-    <footer>
-        &copy; 2025 Your Name
-    </footer>
+                    <!-- More skills follow the same pattern -->
+
+                    <!-- Additional Skills in Card Format -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <i class="fab fa-react text-4xl text-blue-400 mb-2"></i>
+                            <h3 class="font-medium">React</h3>
+                        </div>
+                        <!-- More skill cards -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-2">Projects</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div
+                        class="bg-light rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 flex items-center">
+                                <i class="fas fa-laptop-code text-primary mr-2"></i>
+                                E-Commerce Website
+                            </h3>
+                            <p class="text-gray-700 mb-4">A fully responsive e-commerce platform built with modern web
+                                technologies.</p>
+                            <div class="flex space-x-2 mb-4">
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                                </a>
+                                <a href="#" class="text-gray-700 hover:text-gray-900 font-medium flex items-center">
+                                    <i class="fab fa-github mr-1"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional project cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-2">Contact Me</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                    <p class="mt-4 text-lg">Have a question or want to work together? Feel free to reach out!</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+                    <!-- Contact Info -->
+                    <div class="md:w-1/3">
+                        <!-- Contact details with icons -->
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                                <span>syedmatheen@example.com</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fab fa-linkedin-in text-primary"></i>
+                                <span>linkedin.com/in/syedmatheen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="md:w-2/3 bg-white p-8 rounded-lg shadow-md">
+                        <form action="#" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-dark">Name</label>
+                                <input type="text" id="name" name="name" class="w-full p-3 mt-1 border rounded-lg"
+                                    required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-dark">Email</label>
+                                <input type="email" id="email" name="email" class="w-full p-3 mt-1 border rounded-lg"
+                                    required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-dark">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full p-3 mt-1 border rounded-lg"
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-opacity-90 transition duration-300">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // Toggle mobile menu
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle menu visibility
+            mobileMenu.classList.toggle('hidden');
+
+            // Change icon based on menu state
+            const icon = menuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
 </body>
+
 </html>
